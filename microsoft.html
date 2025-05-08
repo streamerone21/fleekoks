@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Centro de Aplicaciones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+    body {
+      background: #f3f4f6;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #111827;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+    .tile {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: 0.2s;
+    }
+    .tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .tile img {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 12px;
+    }
+    .tile span {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      color: #111827;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Centro de Aplicaciones</h1>
+
+<div class="container">
+  <div class="tile">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAQCAYAAAB49X6EAAAA/klEQVR4nO3SMQqCQBiG4eMHDdKhF/pHo1ejXehW5E4Qif5q+AzxKr2zMiL4MEyCyTJmkzWaUARBEARBEARBEoTANzyKfehfj3Kc23z8u/6NYhRuqMf86V+nlvcYr0xYQpiUwmF1DOPvCHXshEvCOceSHZALUQ+Z2ZVxneIQnKxq4yI1zK7Qz8mdcYnhw3Y9VdwkXJcH9zDge+nmA2WEzZQ0e9zDShF4lZrlzK2/odEz/Td1PbPHUAAAAASUVORK5CYII=" alt="Galería">
+    <span>Galería</span>
+  </div>
+  <div class="tile">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAQCAYAAAB49X6EAAAA90lEQVR4nO3SQQqCQBiF4f+WKh0X0+oXsluhXUh+QOH/ifABbaTCJDNNMMfAsEwJpGpmmZSSMEYRmEZhG4QGRKUlNRtA28gz/Mzv83wVtYXqs7qynr7ohvKM30zFXMFt49rIKn7lRAgnsIXQvo1Z9r+Erg6T8kDEsU4CcziJ/Po5FtC2yDVlTzF3ZkYlg+pzBFXY6OcjYMZcbfL9GHgixLZr0Y0UQzfUN5VDEBEAREQWgT9lN0RY+c5MiAAAAAElFTkSuQmCC" alt="Documentos">
+    <span>Documentos</span>
+  </div>
+  <div class="tile">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAQCAYAAAB49X6EAAAA90lEQVR4nO3RsQqCQBiF4X+WSvWoVeqPoVehfoV+hT0QoYf8M/DwAyWySRgkkmmWYBvAxJYm6apKkp4QARBEARBEARBF4TuPcfqfCeW8vvl72g9UM5q6y6S3pfmDGd7rgxEMhO3Ea2/VRJ4W7smU4Ge5dT2E+ywMJpNsl/L6cy4ZKqWJfC5oy2cgdtgWUGhblnAv3oHi6vGcexXBfCzdp6Yx37n6gK9g3vPw5bn9F1QAAAABJRU5ErkJggg==" alt="Correo">
+    <span>Correo</span>
+  </div>
+  <div class="tile">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAQCAYAAAB49X6EAAAA+UlEQVR4nO3SQQqCQBiF4SeWKh0X0+oXsluhXUh+QOL/4nyALZTEkmTTDDwJBMCaRqZpmVkjBGEZhGURmEZRKQkJS23cF9wT/zNz8z8XtcHW1X13VQ7kZ5yz8cxzD64ob6jt1qDW9UQU8wVfpeN8TIdrVgRBOwJdpH1XPqHwxeC5LxMNayjAM5+TnsYxsG2zFS1V8xZ2RGKYv6cwRZ2OjvI2zKXGb3/YiA2KZE1itUXM31LfBRBAEQRAEQbUB4Jqj3p02D2wAAAABJRU5ErkJggg==" alt="Notas">
+    <span>Notas</span>
+  </div>
+</div>
+
+</body>
+</html>

